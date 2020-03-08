@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.2, 11 February 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Ismail GUEDIRA}
+\tagline{Head of Sales EMEA}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{photo}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{ismail.guedira@gmail.com}
+  \phone{+33 6 22 45 51 93}
+  \mailaddress{59 rue de Courcelles}
+  \location{Paris, FRANCE}
+  %\homepage{www.homepage.com/}
+  %\twitter{@twitterhandle}
+  \linkedin{linkedin.com/in/ismailguedira}
+  %\github{github.com/yourid}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Head of Sales EMEA}{Secure-IC}{March 2019 -- Ongoing}{Paris}
+\begin{itemize}
+\item In charge of Sales revenue from all EMEA countries. Succeeded to achieve 10\% growth thanks to multiple IoT and Automotive Design Wins.
+\item Continuous Growth of the prospects pipe-line thanks to precise and active hunting in the landscape of companies looking for embedded cyber-security solutions.
+\item Several Design Win  by providing a best-in class support and coordination with Secure-IC Technical and Managing Teams.
+\item Regular reporting to Secure-IC managing Team and participation to communication events to update on Sales Strategy.
+%\item Organize regular visits to customers either with local representative, Marketing team or on your own and keep contact with them.
+\item Numerous travel through Europe, to represent Secure-IC at professional exhibitions, maintain long term business relationship and building new partnerships.
+\item Establish 
+\end{itemize}
+
+\divider
+
+\cvevent{Technical Sales Engineer}{Secure-IC}{December 2016 -- March 2019}{Rennes}
+\begin{itemize}
+\item Job description 1
+\item Job description 2
+\end{itemize}
+
+\divider
+
+\cvevent{Technical Sales Internship}{Texas Instrument}{February 2016 -- August 2016}{Paris}
+As part of the automotive team, I was in charge of galvanizing the relations with the french car OEM ( Renault and PSA Group ), in charge of supporting them on various subject ( Automated Driving, Infotainment, Electric and Hybrid Electric Vehicle ), using the support of the worldwild automotive team of Texas Instruments.
+
+\cvsection{Education}
+
+\cvevent{Engineering School at Grenoble Institute of Technology - Phelma}{}{2013 -- 2016}{}
+\begin{itemize}
+\item Exchange student at EPFL (École Polytechnique Fédérale de Lausanne) studying analog and RF Integrated Circuits
+\item Specialization program on Integrated Electronic Systems, studying digital, analog integrated circuits and RF designs. \newline{}
+\end{itemize}
+
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+ % 6/8em/accent!30/{Sleep,\\beautiful sleep},
+  %3/8em/accent!40/Hopeful novelist by night,
+  %8/8em/accent!60/Daytime job,
+  %2/10em/accent/Sports and relaxation,
+  %5/6em/accent!20/Spending time with family
+%}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+%\newpage
+
+%\cvsection{Publications}
+
+%\nocite{*}
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% Switch to the right column. This will now automatically move to the second
+% page if the content is too long.
+
+\switchcolumn
+
+%\cvsection{My Life Philosophy}
+
+%\begin{quote}
+%``Something smart or heartfelt, preferably in one sentence.''
+%\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working}
+\cvtag{Eye for detail}\\
+\cvtag{Motivator \& Leader}
+
+\divider\smallskip
+
+\cvtag{C++}
+\cvtag{Embedded Systems}\\
+\cvtag{Statistical Analysis}
+
+\cvsection{Languages}
+
+\cvskill{French}{5}
+\divider
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{Spanish}{2}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vpsace etc to make ajustments.
+\medskip
+
+\cvsection{Intersts}
+
+\cvevent{BasketBall}{}{}{}
+Regular practice in a national club for ten years and yet with the university.
+
+\divider
+
+\cvevent{Join LION}{Formation au fondamentaux du travail en Start-up}{Winter 2019}{Paris}
+Attending 48 speakers conference during 8 weeks. 8 saturdays where most successful actors in the French Start-up ecosystem share their experience, learning, achievements and failure.
+
+\Mundus joinlion.co/formation-lion-du-samedi/
+
+
+%\divider
+
+%\cvevent{B.Sc.\ in Your Discipline}{Stanford University}{Sept 1998 -- June 2001}{}
+
+% \divider
+
+%\cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+%\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+%{Address Line 1\\Address line 2}
+
+%\divider
+
+%\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+%{Address Line 1\\Address line 2}
+
+
+\end{paracol}
+
+
+\end{document}
